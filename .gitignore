@@ -1,3 +1,22 @@
-manifest.json
-AGENTS.md
-Dark Mode.code-workspace
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Packaging and temporary artifacts
+*.zip
+*.crx
+*.xpi
+*.pem
+*.log
+*.tmp
+
+# Keep project files tracked
+!manifest.json
+!AGENTS.md
+!README.md
+!LICENSE
+!CHANGES.md
+!package.json
+!Dark Mode.code-workspace

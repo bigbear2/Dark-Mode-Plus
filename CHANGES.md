@@ -1,30 +1,36 @@
-# Modifiche e miglioramenti proposti (priorità)
+# Changes and proposed improvements
 
-Alta Priorità:
+## Latest update
 
-- Migrare a Manifest V3 — Manifest V2 è deprecato su molti browser. Aggiornare background scripts a service worker, rivedere permessi e `host_permissions`.
-- Aggiungere opzione per abilitare/disabilitare l'estensione per sito (per-site toggle).
-- Aggiungere test automatici base e pipeline CI (GitHub Actions) per linting e packaging.
+- Added support for saving dark-mode preferences by host or by full URL, with a configurable scope in the options page.
+- Updated the extension metadata and documentation for the published GitHub repository.
+- Added an MIT license and improved project documentation.
 
-Media Priorità:
+## High priority
 
-- Supportare sincronizzazione impostazioni (storage.sync) se desiderato.
-- Aggiungere UI migliorata nella `options` per gestione dei temi e regole per sito.
-- Rimuovere o rinnovare la chiave (`key`) pubblicata nel manifest se non necessaria durante sviluppo.
+- Migrate to Manifest V3 — Manifest V2 is deprecated in many browsers. Update background scripts to service workers and review permissions and `host_permissions`.
+- Add support for per-site toggling and a host/URL scope preference for saved dark-mode choices.
+- Add basic automated tests and a CI pipeline (GitHub Actions) for linting and packaging.
 
-Bassa Priorità:
+## Medium priority
 
-- Aggiungere modalità scheduler (notturna programmata).
-- Migliorare copertura CSS e regole per nuovi siti.
-- Fornire una pagina di onboarding/bug-report integrata.
+- Support settings sync via `storage.sync` if desired.
+- Improve the `options` UI for managing themes and site rules.
+- Review or rotate the published extension `key` if it is not needed during development.
 
-Errori/Problemi trovati:
+## Low priority
 
-- Il manifest usa stringhe escape `\u003Call_urls>` per `<all_urls>`; funziona ma è poco leggibile — si può sostituire con `<all_urls>` esplicito.
-- `manifest_version` è 2: da attenzionare per compatibilità futura.
+- Add a scheduled night mode.
+- Improve CSS coverage and rules for new sites.
+- Provide an onboarding or bug-report page.
 
-Passi consigliati immediati:
+## Notes
 
-1. Conferma il nuovo nome o indica il nome preferito.
-2. Pianificare migrazione Manifest V3 con un branch separato.
-3. Aggiungere file `package.json` e pipeline GitHub Actions di base.
+- The manifest currently uses escaped `\u003Call_urls>` for `<all_urls>`; it works but can be simplified.
+- The extension is published on GitHub at https://github.com/bigbear2/Dark-Mode-Plus.
+
+## Recommended next steps
+
+1. Confirm the preferred project branding and release name.
+2. Plan the Manifest V3 migration in a separate branch.
+3. Add a basic `package.json` workflow and GitHub Actions pipeline.

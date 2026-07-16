@@ -1,0 +1,51 @@
+{
+   "background": {
+      "service_worker": "lib/service_worker.js"
+   },
+   "action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Dark Mode Plus"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "data/content_script/inject.css" ],
+      "exclude_globs": [ "*/chrome/newtab*" ],
+      "js": [ "data/rules/rules.js", "data/content_script/inject.js", "data/content_script/resources/native.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A global dark theme for the web (Plus edition)",
+   "developer": {
+      "name": "Fabio Lucci"
+   },
+   "homepage_url": "https://github.com/bigbear2/Dark-Mode-Plus",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy4Ykd+2I0/z0J6XZlHtiZeAcuZ3fKtb694Zfzrn5ACFim70BPjv04296K7mji2RrQ59iZqeJb/PnL0gAmweqSPTOS4IGhfU6CLLLR5yaxsKQUmaXUI30BktM9jwEnHYlfFwAu/f6uoNjHb61md1Q0kZGhpsUflHG3A6sqS+N407y13uDuvpZ3UI31imjLXc+36IyKUGW6WT9HmrqothxtCV2ShOkFYUfyR4Iw2FqBEJ+1nHFuZw1pROburBOQbQvbnjUyZZhMVLM1OXIvI0K/A59JDdTSDgezUanPFViW17OYs9EA6NZ+RjqLSyWu3NFa6Pt/QdIrMudKFL2sZdWrwIDAQAB",
+   "manifest_version": 3,
+   "name": "Dark Mode Plus",
+   "offline_enabled": true,
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "data/options/options.html"
+   },
+   "permissions": [ "storage", "contextMenus" ],
+   "host_permissions": [ "<all_urls>" ],
+   "short_name": "dark-mode-plus",
+   "version": "0.4.2",
+   "web_accessible_resources": [{
+      "resources": [ "data/content_script/custom/*", "data/content_script/general/*" ],
+      "matches": [ "<all_urls>" ]
+   }]
+}

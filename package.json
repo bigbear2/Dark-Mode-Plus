@@ -2,7 +2,7 @@
   "name": "dark-mode-plus",
   "version": "0.4.2",
   "description": "Dark Mode Plus - global dark theme extension (unpacked)",
-  "author": "bigbear2",
+  "author": "Fabio Lucci (bigbear2)",
   "scripts": {
     "pack": "echo Pack step (manual for browser extensions)"
   }
