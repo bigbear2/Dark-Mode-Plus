@@ -12,11 +12,13 @@ Thumbs.db
 *.log
 *.tmp
 
-# Keep project files tracked
+# Keep the main project files tracked
 !manifest.json
-!AGENTS.md
 !README.md
 !LICENSE
 !CHANGES.md
 !package.json
-!Dark Mode.code-workspace
+
+# Keep local-only files out of Git
+AGENTS.md
+Dark Mode.code-workspace
